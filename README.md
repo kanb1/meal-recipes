@@ -3,9 +3,6 @@
 Et lille frontend-projekt bygget med **HTML, CSS og Vanilla JavaScript**.  
 Jeg har udvidet projektet med en simpel login-funktionalitet via **json-server**, så man kan logge ind med mock-brugere og gemme favoritter i localStorage.
 
-👉 **Live demo (GitHub Pages)**: [LINK HER når du aktiverer Pages]  
-👉 **Kode**: https://github.com/kanb1/meal-recipes
-
 ---
 
 ## Features
