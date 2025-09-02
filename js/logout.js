@@ -1,7 +1,7 @@
 'use strict';
  
 
-//logged user and logoout
+//logged user and logoout (also used for the header)
 const logout_btn = document.getElementById('logout');
 const user_container = document.querySelector('.login_li');
 const logout_container = document.querySelector('.logout_li');
@@ -41,7 +41,7 @@ function logout() {
 }
  
  
- 
+ // If the user is logged in (isLoggedIn is true), it hides the login link (user_container.classList.add("hidden")), shows the logout button (logout_container.classList.remove("hidden")), and adds an event listener to the logout button to call the logout() function when clicked.
 function toggleLogoutButton(){
     console.log("test");
    
@@ -49,6 +49,8 @@ if (isLoggedIn) {
     user_container.classList.add("hidden");
     logout_container.classList.remove("hidden");
     logout_btn.addEventListener("click", logout);
+        // If not logged in it does the opposite below
+
 } else if (!isLoggedIn) {
     user_container.classList.remove("hidden");
     logout_container.classList.add("hidden");

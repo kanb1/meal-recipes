@@ -59,6 +59,11 @@
       "id": "6740",
       "email": "test4@live.dk",
       "password": "Password#1"
+    },
+    {
+      "id": "edee",
+      "email": "kanzaexam@live.dk",
+      "password": "Password#1"
     }
   ]
 }

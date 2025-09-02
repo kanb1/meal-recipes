@@ -13,16 +13,23 @@
 <body>
     <header>
         <nav>
+            <!-- Contains the burgermenu when on mobile -->
             <div class="flex_mobile">
                 <a href="index.html"><img src="../img/Comedo_red_logo.svg" alt="Logo" class="logo"></a>
+                <!-- It's used to toggle the visibility of the main menu -->
                 <button class="nav-toggle" id="nav-toggle">☰</button>
             </div>
             <div class="dropdown">
+                <!-- id="main-menu" is used for JavaScript interaction to toggle its visibility -->
                 <ul class="main-menu" id="main-menu">
                     <li><a href="../html/allrecipes.html" class="menu_links">All Recipes</a></li>
                     <div class="nav_icons">
                         <li><a href="../html/favourites.html" class="menu_links"><img src="../icons/heart-solid.svg" alt="Heart Icon" class="heart_icon"></a></li>
+                        <!-- Login or logout icon - logout.js -->
+                        <!-- Login redirects to the loginpage-->
                         <li class="login_li"><a href="../html/login.html" id="login_link" class="menu_links"><img src="../icons/user-solid.svg" alt="User Icon" class="user_icon"></a></li>
+                        
+                        <!-- Logout is a button with id "logout" - logout js -->
                         <li class="hidden logout_li"><button id="logout" class="logout_flex" aria-label="logout"><img src="../icons/logout.svg" alt="logout_icon" class="logout_icon"><span>Logout</span></button></li>
                     </div>
                 </ul>

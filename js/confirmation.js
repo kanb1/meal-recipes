@@ -1,7 +1,7 @@
 'use strict';
 document.addEventListener("DOMContentLoaded", function () {
     //checks if the user came from the signup page, by getting teh fromSigmup in session storage
-    //this prevents the user from accesing the confirmation page (accidently or forcidly)
+    //this prevents the user from accesing the confirmation page (accidently or forcidly) - check signup.js
     //unless they were actually redirected from a successful signup!
     const fromSignup = sessionStorage.getItem('fromSignup');
  

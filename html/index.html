@@ -34,12 +34,16 @@
         </nav>
     </header>
     <main>
+        <!-- Search -->
         <section class="section_1">
             <article>
                 <h1>Search for Recipes</h1>
                 <p>Welcome to our universe of delicious food recipes! We bring you the latest and tastiest updates from the culinary world. Go ahead and search for your favorite dish to discover our detailed, easy-to-follow recipes for you to try at home!</p>
+                <!-- A form element designated for searching, with a specific role for accessibility. -->
                 <form role="search" class="search_container">
+                    <!--  A label for the search input, hidden visually but available for screen readers for accessibility. -->
                     <label for="search_input" class="visually_hidden">Search for meal</label>
+                    <!-- An input field where users can enter their search query. -->
                     <input type="search" id="search_input" placeholder="Search for meal">
                     <button type="submit" class="search_box" id="search_button">
                         <span class="search_box_icon"><img src="../search_icon.svg" alt="Search Icon"></span>
@@ -49,26 +53,44 @@
             <article>
                 <img class="splash_img" src="../img/mad.jpeg" alt="food image">
             </article>
+
+        <!-- Meal of the day and meals from the search -->
         </section>
         <h2 id="meal_of_th_day">Meal of the day</h2>
+        <!-- A container for displaying search results. Currently empty, to be populated dynamically by JavaScript. -->
         <div class="search_results"></div>
-        <div id="meal_container"></div> <!-- Add this div for meal container -->
-        <div id="meal_of_the_day_container"></div> <!-- fetched meal goes here in the html structure -->
+        <!--meal cards dynamically added by JavaScript. -->
+        <div id="meal_container"></div> <
+        <!-- "Meal of the Day" content will be inserted by JavaScript -->
+        <div id="meal_of_the_day_container"></div> 
+
+
+        <!-- A template for meal cards, which provides a reusable structure for each meal displayed -->
+        <!-- Templates are not rendered directly; they are used by JavaScript to clone and insert content. -->
         <!-- Template with styling for the fetched meals -->
         <template id="section_1_card">
             <div class="card_container">
+                <!--  An image representing the meal. -->
                 <img class="card_img" src="../placeholder_food.jpg" alt="image of pokebowl">
+                <!-- A container for the details of the card -->
                 <div class="card_details_container">
+                    <!-- Name and icon -->
                     <div class="card_name_and_icon">
                         <div class="fav_category_container">
+                            <!-- A button for marking the meal as a favorite -->
                             <button class="btn_fav">
+                                <!-- An icon representing a heart, indicating the favorite status. -->
                                 <i class="far fa-heart"></i>
                             </button>
+                            <!-- A flex container for the category display. -->
                             <div class="category_fav_flex">
+                                <!-- An icon representing the category. -->
                                 <div class="card_category_icon"><span>P</span></div>
+                                <!-- A paragraph indicating the category of the meal. -->
                                 <p class="card_category">category</p>
                             </div>
                         </div>
+                        <!-- A brief description of the meal. -->
                         <h3 class="card_title hyphenate">Seasoned pokebowl with greens</h3>
                     </div>
                     <p class="card_description hyphenate">Pokebowl is a vibrant and nutritious dish that showcases a delightful mix of fresh ingredients.</p>
@@ -87,7 +109,9 @@
                 </section>
             </div>
         </section>
-        <!-- UI CARD CAROUSEL COMPONENT -->
+
+        <!-- A section where carousel items will be displayed. -->
+        <!-- UI CARD CAROUSEL COMPONENT, template for reusing -->
         <template id="carousel_card_template">
             <article>
                 <div class="carousel_card_container">
@@ -119,7 +143,7 @@
             </div>
             <div id="footer_navlinks">
                 <h1>COMPANY</h1>
-                <a href="#">About us</a>
+                <a href="html/aboutus.html">About us</a>
                 <a href="#">Contact us</a>
                 <a href="#">Terms & Conditions </a>
             </div>

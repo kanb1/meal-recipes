@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/recipe.css">
-   
     <script src="../js/recipe.js" defer></script>
     <script src="../js/meals.js" defer></script>
     <script src="../js/script.js" defer></script>
+    <script src="../js/favourites.js" defer></script>
     <title>Home</title>
 </head>
 <body>
@@ -40,23 +40,30 @@
 
     <main>
         <h1>Recipe</h1>
+        <!-- A section designated to display detailed information about the meal. This section will be populated dynamically with content related to the selected recipe. -->
             <section id="meal-details" class="meal-details">
                
             </section>
-   
+   <!-- A template element containing the HTML structure for displaying a recipe's details. This is not displayed directly but is used to clone and populate with data dynamically. -->
         <template id="template_recipe">
+
         <section id="recipe">
             <h1 class="title"></h1>
             <img src="" alt="" class="img">
             <p class="category"></p>
             <p class="cuisine"></p>
             <div class="description">
+                <!--  An unordered list to contain the individual steps or instructions for preparing the recipe. -->
                 <ul class="steps">
                 <li></li>
                
             </ul>
+            
             </div>
         </section>
+        <button class="btn_fav">
+            <i class="far fa-heart"></i>
+        </button>
     </template>
 </main>
 

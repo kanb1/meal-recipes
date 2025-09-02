@@ -78,6 +78,8 @@ input[type="search"] {
     width: 200px;
     margin: 0 auto;
     padding-bottom: 2rem;
+    box-shadow: var(--color-box-shadow);
+
 }
  
 .card_img {

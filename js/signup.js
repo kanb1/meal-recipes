@@ -60,8 +60,7 @@ form.addEventListener('submit', async function (e) {
  
    
  
-             //To avoid the user accesing confirmation page by mistake,
-             // the fromSignup will be stored in sessionstorage to check that the user is redirected from signup
+             // This line of code is used to store a flag ('fromSignup') in session storage to indicate that the user has just signed up. This can be used to confirm that the user was redirected to the confirmation page (signupconfirmation.html) directly after signing up.
              sessionStorage.setItem('fromSignup', 'true');
  
              // Redirect to the confirmation page
@@ -81,6 +80,9 @@ form.addEventListener('submit', async function (e) {
 });
  
  
+// adds event listeners to the email and password input fields to validate their contents
+// The blur event is triggered when an element loses focus. Focus, in this context, refers to the element that is currently selected or active and is ready to receive input from the user. The blur event is a part of the HTML DOM (Document Object Model) events
+// Form Validation: The blur event is commonly used for form validation. When a user finishes entering data into a field and moves to the next one, you can validate the input immediately and provide feedback without waiting for the form to be submitted
 // Notice there is TWO eventlisteners for checking validity,
 // First I let the users finish typing and only check valdity on blur
 // Thereafter I check validty on input so the error message dissapears AS SOON as the input is valid

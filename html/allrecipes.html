@@ -30,13 +30,16 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header> 
+    
  
     <main>
     <h1>All Recipes</h1>    
    
+    <!-- An empty div element with an ID, which will serve as a container where the list of all recipes will be dynamically inserted by JavaScript -->
     <div id="all_recipes_container"></div>
    
+    <!-- reusing the tempalte from our index.html for consistency -->
     <template id="section_1_card">
         <div class="card_container">
             <img class="card_img" src="../placeholder_food.jpg" alt="image of pokebowl">
@@ -57,13 +60,16 @@
             </div>
         </div>  
     </template>
- 
+    
+    <!-- A button with the class more_btn, styled as a button, to load more meals when clicked. Its functionality is typically handled in the associated JavaScript file (allrecipes.js). -->
     <button class="button more_btn">Load more meals</button>
  
     <section>
+        <!-- A div that wraps the filter UI. -->
         <div class="filter_container">
             <h2 id="browse_by_category" class="hyphenate">Browse by category</h2>
             <div class="filter">
+                <!-- Each option represents a category that users can select to filter recipes. The selected attribute pre-selects the "Beef" category. -->
                 <select name="category" id="filter_btn">
                     <option value="Beef" selected>Beef</option>
                     <option value="Chicken">Chicken</option>
@@ -82,10 +88,12 @@
                 </select>
             </div>
         </div>
- 
+        
+        <!-- A div to hold the cloned meal elements that match the selected category. It is dynamically populated with recipes based on the user's selection. -->
         <div id="meal_container">
             <!-- cloned meals go here -->
         </div>
+        <!-- Another button to load more meals, specifically for the currently selected category. This button has an id for targeting it with JavaScript. -->
         <button class="button more_btn" id="more_btn_category">Load more meals</button>
     </section>
  
