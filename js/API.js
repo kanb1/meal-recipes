@@ -121,17 +121,6 @@ const amountOfCards = responsiveCardAmount();
  
  
  /*for loop til loade cards ind , samt den korekte mængde cards baseret på variablen amount of cards.
-   
-    først sætttes variablen i lig med currentindex (variabel for index i arrayet, starter på 0)
-    Så sikres at loopet kører de ønskede antal gange:
-    så længe i er mindre end current index + amount of cards:
-     eksempelvis hvis currentindex er 2, vil i også være 2, hvis amount of cards så er 3, vil den kører så længe i < 5,
-     altså 3 gange, da den vil køre for i=2, i=3 og i=4, derfor kan man med amount of cards variablen styre hvor mange cards der skal vises
-   
-    i++ styrer bare at i's værdi stiger for vært loop, så det næste index i arrayet vælges.
-   
-    consten data index gemmer værdien af i og her sikres at hvis i bliver større end arrayets længde nulstilles det til 0,
-    ved at trække længden af arrayet fra
     */
 for (let i = currentIndex; i < currentIndex + amountOfCards; i++) {
   const dataIndex = i >= random_recipes.length ? i - random_recipes.length : i;
@@ -187,30 +176,19 @@ mobile.onchange = updateCards;
  
  
  
-// click event listener for previous button
 prevButton.addEventListener('click', previousCard);
  
-// Click event listener for next button
 nextButton.addEventListener('click', nextCard);
  
-//En conditional ternary operater - hvis current index er mindre en eller lig med nul:
-//sker det første hvis det er true (så index bliver sat til last index i arrayet)
-// det andet sker hvis det er false, så falder current index bare med 1
-//dette sikrer at der loopes rundt tilbage til slutningen af arrayet
 function previousCard() {
-  // Denne const bruges fordi det sidste index i arrayet altid er en mindre end arrayets længde ( da array starter på 0)
     const lastIndex = random_recipes.length - 1;
     currentIndex = currentIndex <= 0 ? lastIndex : currentIndex - 1;
     console.log("previous clicked, current is: " + currentIndex);
     updateCards();
 }
  
-//En conditional ternary - hvis current index overstiger det sidste index i arrayet:
-//sker det første hvis det er true (så sættes current index til 0 for at komme frem til starten af array igen)
-// det andet sker hvis det er false, så stiger current index bare med 1
-//dette sikrer at der loopes rundt til starten af arrayet
+/
 function nextCard() {
-  // Denne const bruges ford det sidste index i arrayet altid er en mindre end arrayets længde ( da array starter på 0)
   const lastIndex = random_recipes.length - 1;
  
     currentIndex = currentIndex >= lastIndex ? 0 : currentIndex + 1;
